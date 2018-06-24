@@ -1,4 +1,5 @@
 # Packages
+Depleted/
 node_modules/
 yarn.lock
 *lock.json
