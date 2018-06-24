@@ -6,3 +6,4 @@ yarn.lock
 settings.json
 .opennode
 *.sqlite3
+*.bat
