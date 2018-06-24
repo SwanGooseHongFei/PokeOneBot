@@ -7,3 +7,4 @@ settings.json
 .opennode
 *.sqlite3
 *.bat
+*.log
