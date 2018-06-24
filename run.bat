@@ -1,3 +1,0 @@
-node pokeone.js
-
-pause
