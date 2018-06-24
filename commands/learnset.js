@@ -38,7 +38,7 @@ ${body.info.move_learnsets[1].regular_learnset[index].move}`;
 	const embed = new MessageEmbed()
 		.setTitle(`#${body.info.national_id} || ${body.info.name} || ${body.info.types.join('/')}`)
 		.setColor(0x0000C8)
-		.addField('Levelling Learnset List', array, true);
+		.addField('Levelling Learnset List', array);
 	if (isShiny) {
 		embed.setThumbnail(`${settings.shinyImages}${body.info.name.toLowerCase().replace(/\W/g, '')}.gif`);
 	} else {

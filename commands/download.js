@@ -15,7 +15,6 @@ ${links.urlLinux ? `\n📂 Linux: [Click](${links.urlLinux})` : ''}
 ${links.urlAndroid ? `\n📂 Android: [Click](${links.urlAndroid})` : ''}`);
 
 	message.channel.send(embed).catch(console.error);
-	// message.channel.send(`Download for P1 not yet available. You should <#366714491582283778>`).catch(console.error);
 };
 
 exports.conf = {

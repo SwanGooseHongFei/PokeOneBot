@@ -31,7 +31,7 @@ exports.run = async (message, args) => {
 		.setDescription(`${body.info.descriptions.en}`)
 		.addField('Move Stats', `**Base Power:** ${power}\n**Accuracy:** ${acc}%\n**Critical:** ${crit}`, true)
 		.addField('\u200b', `**PP:** ${body.info.pp} (MAX: ${body.info.max_pp})\n**Type: **${body.info.type}
-	**Category:** ${body.info.category.charAt(0).toUpperCase()}${body.info.category.slice(1)}`, true);
+**Category:** ${body.info.category.charAt(0).toUpperCase()}${body.info.category.slice(1)}`, true);
 
 	return message.channel.send(embed).catch(console.error);
 };

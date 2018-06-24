@@ -21,7 +21,7 @@ exports.run = async (message, args) => {
 		.addField(`__Increases:__`, `${body.data.increase}`, true)
 		.addField(`__Decreases:__`, ` ${body.data.decrease}`, true)
 		.addField(`\u200b`, `Pokémon with the ${body.data.name} Nature Like: ${body.data.likes} and Dislike: \
-${body.data.dislikes}`, false);
+${body.data.dislikes}`);
 
 	return message.channel.send(embed).catch(console.error);
 };

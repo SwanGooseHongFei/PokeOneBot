@@ -129,11 +129,11 @@ Female: ${body.info.gender_ratios.female}%` : 'Genderless';
 		.setColor(0x0000C8);
 
 	if (body.info.isGlitch) {
-		embed.addField(`__${body.info.encoder[0]}:__`, stats.join(', '), true)
-			.addField(`__${body.info.encoder[1]}:__`, evTemp.join(', '), true)
-			.addField(`__${body.info.encoder[2]}:__`, abilities, false)
-			.addField(`__${body.info.encoder[3]}:__`, prevolution, false)
-			.addField(`__${body.info.encoder[4]}:__`, evolutions, true);
+		embed.addField(`__${body.info.encoder[0]}:__`, stats.join(', '))
+			.addField(`__${body.info.encoder[1]}:__`, evTemp.join(', '))
+			.addField(`__${body.info.encoder[2]}:__`, abilities)
+			.addField(`__${body.info.encoder[3]}:__`, prevolution)
+			.addField(`__${body.info.encoder[4]}:__`, evolutions);
 		// embed.setThumbnail();
 	} else {
 		embed.addField(`__Base Stats:__`, stats, true)
@@ -144,7 +144,7 @@ ${body.info.weight_us}\n${body.info.weight_eu}`, true)
 			.addField('__Gender Ratio:__', genderRatios, true)
 			.addField(`__Egg Group:__`, eggGroup, true)
 			.addField('__Evolves From:__', prevolution, true)
-			.addField('__Evolves Into:__', evolutions, false)
+			.addField('__Evolves Into:__', evolutions)
 			.setThumbnail(`${isShiny ? settings.shinyImages : settings.images}\
 ${body.info.name.toLowerCase().replace(/\W/g, '')}.gif`);
 	}
