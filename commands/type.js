@@ -11,10 +11,8 @@ exports.run = async (message, args) => {
 	if (!args[1]) {
 		const search = args.splice(0, args.length).join(' ').toLowerCase();
 		const route = 'types';
-		const apifull = `${settings.api.url}/${route}/${search}${settings.api.token}`;
-		const {
-			body
-		} = await snekfetch.get(apifull);
+		const apifull = `${settings.api.url}/${route}/${search}`;
+		const { body } = await snekfetch.get(apifull, settings.api.options).catch(console.error);
 
 		if (body.status === '404') {
 			return message.channel.send(`Type: ${search} not found. Please double check spelling!`)
@@ -46,7 +44,7 @@ exports.run = async (message, args) => {
 	const route = 'types';
 	const apiOne = `${settings.api.url}/${route}/${searchOne}${settings.api.token}`;
 	const apiTwo = `${settings.api.url}/${route}/${searchTwo}${settings.api.token}`;
-	let { body } = await snekfetch.get(apiOne);
+	let { body } = await snekfetch.get(apiOne, settings.api.options).catch(console.error);
 
 	const [dealsOne, dealsTwo, takesOne, takesTogether] = [
 		[],
@@ -71,23 +69,23 @@ exports.run = async (message, args) => {
 	name = body.info.name;
 	const colour = body.info.colour;
 
-	body = await snekfetch.get(apiTwo);
+	let { body2 } = await snekfetch.get(apiTwo, settings.api.options).catch(console.error);
 
-	if (body.status === '404' && searchTwo) {
+	if (body2.status === '404' && searchTwo) {
 		return message.channel.send(`Type: ${searchTwo} not found. Please double check spelling!`)
 			.catch(console.error);
 	}
 
 	for (let index = 0; index < 18; index++) {
-		const array = body.info.attacking[index].split(' ');
+		const array = body2.info.attacking[index].split(' ');
 		dealsTwo.push(`${array[1]}x to ${array[0]}`);
 
 		const firstTypeMultiplier = takesOne[index];
-		const secondTypeMultiplier = body.info.defending[index].split(' ')[1];
+		const secondTypeMultiplier = body2.info.defending[index].split(' ')[1];
 		const finalMultiplier = parseFloat(firstTypeMultiplier) * parseFloat(secondTypeMultiplier);
-		takesTogether.push(`${finalMultiplier}x from ${body.info.defending[index].split(' ')[0]}`);
+		takesTogether.push(`${finalMultiplier}x from ${body2.info.defending[index].split(' ')[0]}`);
 	}
-	name += `/${body.info.name}`;
+	name += `/${body2.info.name}`;
 
 	const embed = new MessageEmbed()
 		.setTitle(name)

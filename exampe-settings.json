@@ -1,0 +1,27 @@
+{
+	"ownerid": [
+		"135605110976806914",
+		"371193929044852738"
+	],
+	"p1mod": [
+		"371193929044852738",
+		"130036426912825344"
+	],
+	"p1dev": [
+		"371193929044852738",
+		"130036426912825344"
+	],
+	"prefix": "!",
+	"token": "YOUR-DISCORD-BOT-TOKEN-HERE",
+	"api": {	
+		"url": "http://api-unofficialp1bot.193b.starter-ca-central-1.openshiftapps.com/public/v1",
+		"options": {
+			"headers": {
+				"Authorization": "YOUR-API-TOKEN-HERE"
+			}
+		}
+    },
+	"images": "http://play.pokemonshowdown.com/sprites/xyani/",
+	"shinyImages": "http://play.pokemonshowdown.com/sprites/xyani-shiny/"
+	
+}

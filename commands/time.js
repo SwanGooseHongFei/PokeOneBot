@@ -4,8 +4,8 @@ const settings = require('../settings.json');
 
 exports.run = async message => {
 	const route = 'timeevents';
-	const apifull = `${settings.api.url}/${route}${settings.api.token}`;
-	const { body } = await snekfetch.get(apifull);
+	const apifull = `${settings.api.url}/${route}`;
+	const { body } = await snekfetch.get(apifull, settings.api.options).catch(console.error);
 
 	const embed = new MessageEmbed()
 		.setTitle(`Timed Events || ${body.day}`)

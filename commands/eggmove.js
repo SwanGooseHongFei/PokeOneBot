@@ -16,8 +16,8 @@ exports.run = async (message, args) => {
 	}
 	search = search.join(' ').toLowerCase();
 	const route = 'pokemon';
-	const apifull = `${settings.api.url}/${route}/${search}${settings.api.token}`;
-	const { body } = await snekfetch.get(apifull);
+	const apifull = `${settings.api.url}/${route}/${search}`;
+	const { body } = await snekfetch.get(apifull, settings.api.options).catch(console.error);
 
 	if (body.status === '404') {
 		return message.channel.send(`Pokemon: ${search} not found. Please double check spelling!`);

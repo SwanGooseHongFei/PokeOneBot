@@ -9,8 +9,8 @@ exports.run = async (message, args) => {
 	}
 	const search = args.splice(0, args.length).join(' ').toLowerCase();
 	const route = 'nature';
-	const apifull = `${settings.api.url}/${route}/${search}${settings.api.token}`;
-	const { body } = await snekfetch.get(apifull);
+	const apifull = `${settings.api.url}/${route}/${search}`;
+	const { body } = await snekfetch.get(apifull, settings.api.options).catch(console.error);
 
 	if (body.status === '404') {
 		return message.channel.send(`Nature: ${search} not found. Please double check spelling!`);
