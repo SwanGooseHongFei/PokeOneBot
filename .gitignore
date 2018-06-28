@@ -1,4 +1,10 @@
-/node_modules
-/depleted
-run.bat
+# Packages
+Depleted/
+node_modules/
+yarn.lock
+*lock.json
 settings.json
+.opennode
+*.sqlite3
+*.bat
+*.log

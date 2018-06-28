@@ -1,14 +1,19 @@
 {
-  "name": "PokeOneBotHeroku",
+  "name": "poke_one_bot_heroku",
   "version": "1.0.0",
   "description": "",
   "main": "pokeone.js",
   "dependencies": {
-    "discord.js": "^11.3.2",
-    "moment": "^2.22.1",
+    "bufferutil": "^3.0.5",
+    "discord.js": "discordjs/discord.js",
+    "erlpack": "discordapp/erlpack",
+    "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
-    "pm2": "^2.10.3",
-    "snekfetch": "^4.0.0"
+    "pm2": "^2.10.4",
+    "sequelize": "^4.38.0",
+    "snekfetch": "^4.0.4",
+    "sqlite3": "^4.0.1",
+    "zlib-sync": "^0.1.4"
   },
   "devDependencies": {},
   "scripts": {

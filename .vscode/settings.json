@@ -1,0 +1,24 @@
+{
+    "editor.fontLigatures": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1800000,
+    "editor.fontFamily": "'Fira Code'",
+    "workbench.iconTheme": "vscode-icons",
+    "git.autofetch": true,
+    "git.enableCommitSigning": true,
+    "editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.tabSize": 4,
+	"editor.rulers": [
+		120
+	],
+	"explorer.confirmDelete": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "[javascript]": {
+		
+    },
+    "eslint.packageManager": "yarn"
+}
